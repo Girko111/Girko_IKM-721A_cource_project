@@ -10,6 +10,16 @@ namespace Girko_IKM_721A_cource_project
     {
         private string Data; //вхідні дані
         private string Result; // Поле результату
+        private System.DateTime TimeBegin; // час початку роботи програми
+
+        public void SetTime() // метод запису часу початку роботи програми
+        {
+            this.TimeBegin = System.DateTime.Now;
+        }
+        public System.DateTime GetTime() // Метод отримання часу завершення програми
+        {
+            return this.TimeBegin;
+        }
         public void Write(string D)
         {
             this.Data = D;
