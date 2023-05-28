@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Girko_IKM_721A_cource_project
 {
-    public partial class About : Form
+    public partial class About : System.Windows.Forms.Form
     {
         public About()
         {
