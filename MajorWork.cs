@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace Girko_IKM_721A_cource_project
 {
@@ -18,6 +19,10 @@ namespace Girko_IKM_721A_cource_project
         private string OpenFileName;// ім’я файлу для читання
         public bool Modify;
         private int Key;// поле ключа
+        public Stack myStack = new Stack();
+        public string[] myArr = new string[100];
+        public Queue myQueue = new Queue();
+        public string[] smyQueue = new string[100];
 
 
 
