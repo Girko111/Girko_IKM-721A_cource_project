@@ -9,3 +9,4 @@
 \\Mac\Home\Desktop\Girko\Girko_IKM-721A_cource_project\obj\Debug\Girko_IKM-721A_cource_project.csproj.CoreCompileInputs.cache
 \\Mac\Home\Desktop\Girko\Girko_IKM-721A_cource_project\obj\Debug\Girko_IKM-721A_cource_project.exe
 \\Mac\Home\Desktop\Girko\Girko_IKM-721A_cource_project\obj\Debug\Girko_IKM-721A_cource_project.pdb
+\\Mac\Home\Desktop\Girko\Girko_IKM-721A_cource_project\obj\Debug\Girko_IKM_721A_cource_project.About.resources
