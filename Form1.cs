@@ -31,6 +31,7 @@ namespace Girko_IKM_721A_cource_project
         {
             MajorObject = new MajorWork();
             MajorObject.SetTime();
+            MajorObject.Modify = false;// заборона запису
             About A = new About(); // створення форми About
             A.tAbout.Start();
             A.ShowDialog(); // відображення діалогового вікна About
@@ -98,9 +99,10 @@ namespace Girko_IKM_721A_cource_project
 
         private void зберегтиЯкToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (SfdSave.ShowDialog() == DialogResult.OK)// Виклик діалогового вікна збереженняфайлу
+            if (SfdSave.ShowDialog() == DialogResult.OK) // Виклик діалогового вікна збереженняфайлу
             {
-                MessageBox.Show(SfdSave.FileName);
+                MajorObject.WriteSaveFileName(SfdSave.FileName); // написання імені файлу
+                MajorObject.SaveToFile(); // метод збереження в файл }
             }
         }
 
@@ -122,7 +124,7 @@ namespace Girko_IKM_721A_cource_project
                 try
                 {
                     System.IO.DriveInfo D = new System.IO.DriveInfo(disks[i]);
-                    disk += D.Name + "-" + D.TotalSize.ToString() + "-" + D.TotalFreeSpace.ToString()  + (char)13;// змінній присвоюється ім’я диска, загальна кількість місця и вільне  місце на диску
+                    disk += D.Name + "-" + (Math.Round((double)D.TotalSize / (1024 * 1024 * 1024), 2)) + "ГБ" + "-" + (Math.Round((double)D.TotalFreeSpace / (1024 * 1024 * 1024), 2)) + "ГБ" + (char)13;//змінній присвоюється ім’я диска, загальна кількість місця и вільнемісце на диску
                 }
                 catch
                 {
