@@ -109,10 +109,11 @@ namespace Girko_IKM_721A_cource_project
 
         private void відкритиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (OfdOpen.ShowDialog() == DialogResult.OK) // Виклик діалогового вікна відкриття  файлу
+            if (OfdOpen.ShowDialog() == DialogResult.OK) // Виклик діалогу відкриття файлу
 
             {
-                MessageBox.Show(OfdOpen.FileName);
+                MajorObject.WriteOpenFileName(OfdOpen.FileName); // відкриття  файлу
+                MajorObject.ReadFromFile(dgwOpen); // читання даних з файлу
             }
         }
 
@@ -157,6 +158,11 @@ namespace Girko_IKM_721A_cource_project
                 if (MessageBox.Show("Дані не були збережені. Продовжити вихід?", "УВАГА",
                 MessageBoxButtons.YesNo) == DialogResult.No)
                     e.Cancel = true; // припинити закриття
+        }
+
+        private void bSearch_Click(object sender, EventArgs e)
+        {
+            MajorObject.Find(tbSearch.Text); //пошук
         }
     }
 }
